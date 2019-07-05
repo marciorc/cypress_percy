@@ -1,0 +1,16 @@
+{
+  "name": "cypress_percy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open"
+  },
+  "author": "Marcio Correa",
+  "license": "ISC",
+  "devDependencies": {
+    "@percy/cypress": "^1.0.9",
+    "cypress": "^3.3.2"
+  }
+}
