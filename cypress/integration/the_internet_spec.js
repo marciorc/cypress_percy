@@ -46,7 +46,21 @@ describe('POC Visual Regression with Percy', function() {
         expect(text).to.eq('Congratulations! You must have the proper credentials.')
       })
       cy.percySnapshot()
-      cy.go('back')
+    });
+
+    it('Basic Auth Fail', function() {
+      cy.visit('/basic_auth', {
+        auth: {
+          username: 'admin',
+          password: '321'
+        },
+        failOnStatusCode: false
+      });
+      cy.get('body').then(($el) => {
+        const text = $el.text().trim()
+        expect(text).to.eq('Not authorized')
+      })
+      cy.percySnapshot()
     });
   });
 
