@@ -63,6 +63,18 @@ describe('POC Visual Regression with Percy', function() {
     });
   });
 
+  context('Checkboxes', function() {
+    it('Checkboxes', function() {
+      cy.get('[href="/checkboxes"]').click()
+      cy.percySnapshot('Before Check')
+
+      cy.get('[type="checkbox"]:first-child').click()
+      cy.get('[type="checkbox"]:last-child').click()
+
+      cy.percySnapshot('After Checks')
+    });
+  });
+
   context('File Upload', function() {
     it('Upload a file', function() {
       cy.get('[href="/upload"]').click()
