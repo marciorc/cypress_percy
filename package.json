@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "test": "test"
   },
   "author": "Marcio Correa",
   "license": "ISC",
   "devDependencies": {
     "@percy/cypress": "^1.0.9",
-    "cypress": "^3.4.1",
+    "cypress": "^3.8.0",
     "cypress-file-upload": "^3.3.3"
   }
 }
